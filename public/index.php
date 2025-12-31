@@ -35,7 +35,7 @@ $result = mysqli_query($koneksi, "SELECT * FROM contacts ORDER BY created_at DES
     <div class="card shadow-sm">
         <div class="card-body p-0">
 
-            <table class="table table-striped table-hover mb-0">
+            <table class="table table-striped table-hover table-bordered align-middle mb-0">
                 <thead class="table-primary">
                     <tr>
                         <th>#</th>
