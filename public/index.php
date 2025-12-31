@@ -11,7 +11,7 @@ $result = mysqli_query($koneksi, "SELECT * FROM contacts ORDER BY created_at DES
     <meta charset="UTF-8">
     <title>Buku Alamat</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
 </head>
 
 <body class="bg-light">
@@ -83,6 +83,6 @@ $result = mysqli_query($koneksi, "SELECT * FROM contacts ORDER BY created_at DES
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
