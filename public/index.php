@@ -1,1 +1,88 @@
+<?php
+include '../config/database.php';
 
+// Ambil semua data kontak
+$result = mysqli_query($koneksi, "SELECT * FROM contacts ORDER BY created_at DESC");
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Buku Alamat</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+
+<body class="bg-light">
+
+<nav class="navbar navbar-dark bg-primary mb-4">
+    <div class="container">
+        <span class="navbar-brand">📒 Buku Alamat</span>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4>Daftar Kontak</h4>
+
+        <a href="create.php" class="btn btn-success">
+            + Tambah Kontak
+        </a>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+
+            <table class="table table-striped table-hover mb-0">
+                <thead class="table-primary">
+                    <tr>
+                        <th>#</th>
+                        <th>Nama</th>
+                        <th>Telepon</th>
+                        <th>Email</th>
+                        <th>Kategori</th>
+                        <th width="150">Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                <?php
+                $no = 1;
+
+                while($row = mysqli_fetch_assoc($result)): ?>
+
+                    <tr>
+                        <td><?= $no++; ?></td>
+                        <td><?= $row['name']; ?></td>
+                        <td><?= $row['phone']; ?></td>
+                        <td><?= $row['email']; ?></td>
+                        <td><?= $row['category']; ?></td>
+
+                        <td>
+                            <a href="edit.php?id=<?= $row['id']; ?>" class="btn btn-sm btn-warning">
+                                Edit
+                            </a>
+
+                            <a href="delete.php?id=<?= $row['id']; ?>" 
+                               class="btn btn-sm btn-danger"
+                               onclick="return confirm('Yakin ingin menghapus?')">
+                                Hapus
+                            </a>
+                        </td>
+                    </tr>
+
+                <?php endwhile; ?>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
