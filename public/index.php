@@ -1,7 +1,6 @@
 <?php
 include '../config/database.php';
 
-// Ambil semua data kontak
 $result = mysqli_query($koneksi, "SELECT * FROM contacts ORDER BY created_at DESC");
 ?>
 
