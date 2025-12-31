@@ -16,9 +16,12 @@ $result = mysqli_query($koneksi, "SELECT * FROM contacts ORDER BY created_at DES
 
 <body class="bg-light">
 
-<nav class="navbar navbar-dark bg-primary mb-4">
-    <div class="container">
-        <span class="navbar-brand">📒 Buku Alamat</span>
+<nav class="navbar navbar-dark bg-primary mb-4 shadow-sm">
+    <div class="container py-2">
+        <span class="navbar-brand d-flex align-items-center gap-2 fs-3 fw-bold">
+            <i class="bi bi-journal-bookmark"></i>
+            Buku Alamat
+        </span>
     </div>
 </nav>
 
