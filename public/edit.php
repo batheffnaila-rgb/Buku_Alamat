@@ -48,7 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <nav class="navbar navbar-dark bg-primary mb-4 shadow-sm">
     <div class="container">
         <span class="navbar-brand fw-bold">
-            ✏️ Edit Kontak
+            <i class="bi bi-pencil-square"></i>
+                Edit Kontak
         </span>
     </div>
 </nav>
