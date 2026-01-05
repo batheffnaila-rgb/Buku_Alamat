@@ -53,13 +53,20 @@ Fitur utama yang berhasil diimplementasikan pada aplikasi Buku Alamat meliputi:
 ## Struktur Folder Project
 Struktur folder dalam project Buku Alamat adalah sebagai berikut:
 config/ — konfigurasi koneksi database (database.php)
+
 public/ — file utama aplikasi (index, create, edit, delete, view)
+
 README.md — dokumentasi project
 
 ## Uji Coba Singkat
 Buka index.php untuk melihat daftar kontak.
+
 Klik Tambah Kontak (create.php) lalu simpan data.
+
 Pastikan data muncul di halaman utama.
+
 Klik Edit untuk memperbarui data kontak.
+
 Klik Hapus untuk menghapus kontak yang dipilih.
+
 Klik salah satu kontak untuk melihat detail (view.php).
